@@ -1,0 +1,50 @@
+html {
+    position: relative;
+}
+body {
+    margin: 0;
+}
+
+a {
+    color: rgb(var(--dd-color-rgb));
+    text-decoration: none;
+}
+
+
+:root {
+    --fill: rgb(var(--dd-fill-rgb));
+    --home-content-fill: rgb(249, 253, 250);
+
+    --filament-color: #EFF0F0;
+    --active-color: var(--dd-primary);
+}
+
+
+@media screen and (max-width:576px) {
+    .yhkb-aside-left {
+        width: 0;
+    }
+
+    .header {
+        .book-catalog {
+            .list-icon {
+                display: block !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hidden-aside-right()
+}
+
+
+.hidden-aside-right {
+    .yhkb-aside-right {
+        width: 0;
+        padding: 0 !important;
+        overflow: hidden;
+        transform: scaleX(0);
+        visibility: hidden;
+    }
+}
