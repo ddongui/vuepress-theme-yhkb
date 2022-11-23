@@ -1,7 +1,7 @@
 {
     "name": "@ddongui/vuepress-theme-yhkb",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.0.1-alpha.0",
     "type": "module",
     "types": "es/index.d.ts",
     "module": "es/index.js",
@@ -13,7 +13,8 @@
         "docs:build": "vuepress build docs",
         "preview": "vite preview",
         "copy": "rmdir /s/q es\\client && mkdir es\\client && xcopy /E src\\client es\\client",
-        "copy2": "mkdir es\\client && xcopy /E src\\client es\\client"
+        "copy2": "mkdir es\\client && xcopy /E src\\client es\\client",
+        "release": "standard-version --prerelease alpha"
     },
     "dependencies": {
         "@ddongui/icon": "workspace:0.0.0-alpha.4",
