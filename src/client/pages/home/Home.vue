@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import HomeMenu from "../../components/menu/Menu.vue";
-import { siderItems } from "@temp/siderItems";
-import { DdIcon, Book } from "@ddongui/icon";
+import HomeMenu from "../../components/menu/Menu.vue"
+import { siderItems } from "@temp/siderItems"
+import { DdIcon, Book } from "@ddongui/icon"
 </script>
 <style lang="less" scoped>
 .yhkb-home {
@@ -21,7 +21,7 @@ import { DdIcon, Book } from "@ddongui/icon";
         max-width: 40em;
         margin: 0 auto;
         padding: 2em;
-        background-color: var(--fill);
+        background-color: rgb(var(--fill-rgb));
         h1 {
             display: flex;
             align-items: center;

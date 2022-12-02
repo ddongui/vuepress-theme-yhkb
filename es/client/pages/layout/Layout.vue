@@ -48,7 +48,7 @@ useRouter().afterEach((to, from) => {
     overflow: hidden;
 }
 .yhkb-aside-left {
-    border-right: 2px solid var(--filament-color);
+    border-right: 2px solid rgb(var(--border-rgb));
 
     overflow: hidden;
 }

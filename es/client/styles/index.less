@@ -1,6 +1,9 @@
 html {
     position: relative;
 }
+
+
+
 body {
     margin: 0;
 }
@@ -12,13 +15,30 @@ a {
 
 
 :root {
-    --fill: rgb(var(--dd-fill-rgb));
-    --home-content-fill: rgb(249, 253, 250);
-
-    --filament-color: #EFF0F0;
     --active-color: var(--dd-primary);
+    --border-rgb: 239, 240, 240;
+    --fill-rgb: 255, 255, 255;
+    --fill: rgb(var(--fill-rgb));
+    --home-content-fill: rgb(226, 239, 237);
 }
 
+html.dark {
+    --dd-color-rgb: unset;
+    --fill-rgb: 36, 36, 36;
+    --border-rgb: 66, 66, 66;
+    --dd-fill-rgb: var(--fill-rgb);
+    --home-content-fill: rgb(var(--fill-rgb));
+
+    .dd-link a {
+        --color: var(--c-text-lightest);
+    }
+
+    .dd-icon {
+        path {
+            stroke: var(--c-text-lightest);
+        }
+    }
+}
 
 @media screen and (max-width:576px) {
     .yhkb-aside-left {
@@ -46,5 +66,15 @@ a {
         overflow: hidden;
         transform: scaleX(0);
         visibility: hidden;
+    }
+}
+
+.theme-default-content {
+    ul {
+        list-style: unset;
+    }
+
+    li {
+        list-style: unset;
     }
 }

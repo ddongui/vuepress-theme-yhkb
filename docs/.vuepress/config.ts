@@ -1,14 +1,7 @@
-import { defaultTheme } from "vuepress";
-import { theme } from "vuepress-theme-yhkb";
+import { theme } from "@ddongui/vuepress-theme-yhkb"
+import { defineUserConfig } from "vuepress"
 
-export default {
-    theme: theme({
-        // 默认主题配置
-        navbar: [
-            {
-                text: "首页",
-                link: "/",
-            },
-        ],
-    }),
-};
+export default defineUserConfig({
+    base: "/vuepress-theme-yhkb/",
+    theme: theme(),
+})

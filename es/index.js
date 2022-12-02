@@ -1,10 +1,10 @@
 import { path as l, fs as f, getDirname as H } from "@vuepress/utils";
-import { createPage as A } from "@vuepress/core";
+import { createPage as P } from "@vuepress/core";
 import "vue";
-import { defaultTheme as D } from "@vuepress/theme-default";
-async function P(e) {
+import { defaultTheme as A } from "@vuepress/theme-default";
+async function D(e) {
   if (e.pages.every((t) => t.path !== "/")) {
-    const t = await A(e, {
+    const t = await P(e, {
       path: "/",
       frontmatter: {
         layout: "Layout"
@@ -51,7 +51,7 @@ function T(e) {
   const t = /* @__PURE__ */ new Map();
   e.pages.forEach((n) => {
     const r = decodeURI(n.path);
-    if (!x(r)) {
+    if (x(r)) {
       const i = _(r);
       d(t, i, r);
     }
@@ -67,16 +67,16 @@ function _(e) {
   return t[t.length - 1] === "" && (t = t.slice(0, t.length - 1)), t;
 }
 function x(e) {
-  return e === "/404.html";
+  return !(e === "/404.html" || e === "/");
 }
 function E(e) {
   var r;
   const t = [], n = e.contentRendered.matchAll(/<h(\d)\s+id="(.*?)".*><a.*>.*<\/a>(.*)<\/h\d>/g);
   for (const i of n) {
     const s = parseInt(i[1]), c = "#" + i[2], a = i[3];
-    let o = j(t);
+    let o = O(t);
     s === 1 ? (o = t[t.length] = u(1), o.level = s, o.link = c, o.title = a, o.children = []) : (((r = t == null ? void 0 : t[0]) == null ? void 0 : r.title) === "JavaSE \u91CD\u5B66\u62D3\u5C55" && (console.log(s), console.log("lastHeader", o)), b(1, s + 1, (v) => {
-      o === void 0 && (o = t[t.length] = u(v)), o = y(o.children, s);
+      o === void 0 && (o = t[t.length] = u(v)), o = j(o.children, s);
     }), o.link = c, o.title = a);
   }
   return t;
@@ -89,14 +89,14 @@ function u(e) {
     children: []
   };
 }
-function j(e) {
+function O(e) {
   return e[e.length - 1];
 }
-function y(e, t) {
+function j(e, t) {
   return e[e.length] = u(t);
 }
 const I = /[A-Z]:\\/;
-function O(e) {
+function y(e) {
   return e = e.replace(I, "/"), e = e.replaceAll(/\\/g, "/"), e;
 }
 function R(e, t) {
@@ -123,7 +123,7 @@ function L(e, t) {
     let i = n == null ? void 0 : n(...r);
     if (i) {
       const c = (s = i.match(/src="(.*?)"/)) == null ? void 0 : s[1];
-      return c && N(c) && (R(e, c), i = O(i)), i;
+      return c && N(c) && (R(e, c), i = y(i)), i;
     }
     return "";
   };
@@ -144,9 +144,9 @@ function Z(e) {
       n.use(() => L(t, n));
     },
     async onInitialized(n) {
-      T(n), P(n);
+      T(n), D(n);
     },
-    extends: D()
+    extends: A()
   });
 }
 export {
