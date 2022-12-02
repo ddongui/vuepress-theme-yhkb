@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.53">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title></title><meta name="description" content="">
+    <link rel="preload" href="/vuepress-theme-yhkb/assets/style.baf04699.css" as="style" /><link rel="stylesheet" href="/vuepress-theme-yhkb/assets/style.baf04699.css" />
+    <link rel="modulepreload" href="/vuepress-theme-yhkb/assets/app.f40100d4.js"><link rel="modulepreload" href="/vuepress-theme-yhkb/assets/404.html.6f6619fb.js"><link rel="modulepreload" href="/vuepress-theme-yhkb/assets/404.html.d2dc3323.js"><link rel="prefetch" href="/vuepress-theme-yhkb/assets/index.html.cbdd194a.js" as="script" /><link rel="prefetch" href="/vuepress-theme-yhkb/assets/index.html.abc06b45.js" as="script" /><link rel="prefetch" href="/vuepress-theme-yhkb/assets/index.html.d730b5fb.js" as="script" /><link rel="prefetch" href="/vuepress-theme-yhkb/assets/index.html.b54c54e1.js" as="script" /><link rel="prefetch" href="/vuepress-theme-yhkb/assets/index.html.6c0681f6.js" as="script" /><link rel="prefetch" href="/vuepress-theme-yhkb/assets/index.html.b4b727dd.js" as="script" />
+  </head>
+  <body>
+    <div id="app"><!--[--><div>404 Not Found</div><!----><!--]--></div>
+    <script type="module" src="/vuepress-theme-yhkb/assets/app.f40100d4.js" defer></script>
+  </body>
+</html>
